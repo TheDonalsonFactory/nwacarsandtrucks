@@ -19,4 +19,13 @@
     <Folder Include="Data\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights" Version="2.21.0-beta1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.15.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="6.0.0-preview.4.21253.5" />
+    <PackageReference Include="Microsoft.Azure.SignalR" Version="1.4.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.Extensions.Primitives" Version="7.0.0-preview.4.22229.4" />
+  </ItemGroup>
+
 </Project>

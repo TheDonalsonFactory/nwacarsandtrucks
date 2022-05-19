@@ -1,5 +1,118 @@
 ﻿$bg: #ead2a8;
+$pColor: #618c03;
+$sColor: #6db4f2;
+$pLight: #92bc40;
+$pDark: #315e00;
+$sLight: #a2e6ff;
+$sDark: #3385bf;
+
 
 body {
-    background: $bg
+    background: $sColor;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.alpha {
+    background-color: yellow;
+}
+
+.myTop-row {
+    background-color: $pDark;
+    border-bottom: 1px solid $pLight;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.myNav {
+    background: linear-gradient($sDark,$sLight);
+    align-items: stretch;
+}
+
+.horizontalNav-Item {
+    a {
+        color: black;
+    }
+}
+
+.myNav-item {
+
+    a {
+        color: black;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+}
+
+.blog-grid {
+    display: grid;
+    justify-items: center;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+
+    .blog {
+        background-color: $pColor;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+        transition: all 0.4s ease-in-out;
+        width: 20vw;
+
+
+        .text {
+            margin-top: 2.5vh;
+            padding: 1.1rem;
+            border-top: 8px solid $pDark;
+
+
+
+            h4 {
+                font-size: 1.5rem;
+                margin-bottom: 0.7rem;
+                transition: all 0.4s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    color: $sColor;
+                }
+            }
+
+            p {
+                color: black;
+                line-height: 2rem;
+                padding-bottom: 1rem;
+            }
+        }
+
+
+
+
+        img {
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            filter: grayscale(100%);
+            transition: all 0.4s ease-in-out;
+        }
+
+        &:hover {
+            box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+            transition: all 0.4s ease-in-out;
+
+            img {
+                filter: grayscale(0);
+                transform: scale(1.1);
+                box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.8);
+            }
+        }
+    }
 }
