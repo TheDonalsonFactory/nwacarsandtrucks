@@ -1,59 +1,306 @@
 ﻿$bg: #ead2a8;
-$pColor: #618c03;
-$sColor: #6db4f2;
-$pLight: #92bc40;
-$pDark: #315e00;
-$sLight: #a2e6ff;
-$sDark: #3385bf;
+$pColor: #0000ca;
+$sColor: #ca0000;
+$pLight: #A7A9FF;
+$pDark: #000097;
+$sLight: #ff4e2f;
+$sDark: #910000;
 
 
-body {
-    background: $sColor;
+a {
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+}
+
+h1 {
+    font-family: 'Century Gothic',Geneva,sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 3rem;
+    font-weight: bolder;
+    margin: auto;
+    grid-column: 1/13;
+}
+
+h2 {
+    font-family: 'Century Gothic',Geneva,sans-serif;
+    text-align: center;
+    margin: auto;
+}
+
+h3 {
+    font-family: 'Century Gothic',Geneva,sans-serif;
+    text-align: center;
+    margin: auto;
+}
+
+p {
+    margin: auto;
+    font-family: 'Century Gothic',Geneva,sans-serif;
+    text-align: center;
 }
 
 nav {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    background: linear-gradient($pDark,$pLight);
+    align-items: flex-start;
 }
 
-.alpha {
-    background-color: yellow;
+img {
+    max-width: 1200px;
+}
+
+main {
+    grid-column: 3 / span 10;
+}
+
+.myTitle {
+    font-size: 10rem;
+    text-align: center;
+}
+
+.cars {
+    color: $pColor;
+    font-size: 8rem;
+    text-align: center;
+}
+
+.trucks {
+    color: $sColor;
+    font-size: 8rem;
+    text-align: center;
+}
+
+.text-gradient {
+    background: -webkit-linear-gradient(0deg, $pColor 0%, $sColor 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    border: 3px solid red;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    border: 3px solid green;
+    text-align: center;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    border: 3px solid red;
+    justify-items: center;
+    align-items: start;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo {
+    grid-row: 1/ span 2;
+    display: block;
+    justify-items: center;
+    margin: 10px 10px 10px 10px;
+}
+
+.left-vertical-nav-bar {
+    grid-column: 1/3;
 }
 
 .myTop-row {
     background-color: $pDark;
     border-bottom: 1px solid $pLight;
-    display: flex;
+    color: white;
     justify-items: center;
     align-items: center;
     flex-wrap: wrap;
+    grid-column: 3/13;
+    display: none; 
 }
 
 .myNav {
-    background: linear-gradient($sDark,$sLight);
     align-items: stretch;
-}
-
-.horizontalNav-Item {
-    a {
-        color: black;
-    }
 }
 
 .myNav-item {
 
     a {
-        color: black;
+        color: white;
         border-radius: 4px;
         height: 3rem;
         display: flex;
         align-items: center;
         line-height: 3rem;
+
+        :visited {
+            color: pink;
+        }
+
+        :focus {
+            color: pink;
+        }
     }
 }
 
-.blog-grid {
+.horizontalNav-Item {
+    a {
+        color: white;
+    }
+}
+
+.featured-vehicle-graphic-left {
+    grid-column: 2/7;
+    margin: auto;
+    padding: 10px;
+    transition-duration: .3s;
+    transition-property: transform;
+
+    :before {
+        pointer-events: none;
+        position: absolute;
+        z-index: -1;
+        content: '';
+        top: 100%;
+        left: 5%;
+        height: 10px;
+        width: 90%;
+        opacity: 0;
+        background: radial-gradient(ellipse at center, rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 80%);
+        transition-duration: .3s;
+        transition-property: transform opacity;
+    }
+
+/*    :before {
+        opacity: .4;
+        transform: translateY(6px);
+        animation-name: hover-shadow;
+        animation-duration: 1.5s;
+        animation-delay: .3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }*/
+
+/*    :hover {
+        transform: translateY(-6px);
+        animation-name: hover;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }*/
+}
+
+.featured-vehicle-graphic-right {
+    grid-column: 7/12;
+    margin: auto;
+    padding: 10px;
+
+/*    :before {
+        pointer-events: none;
+        position: absolute;
+        z-index: -1;f
+        content: '';
+        top: 100%;
+        left: 5%;
+        height: 10px;
+        width: 90%;
+        opacity: 0;
+        background: radial-gradient(ellipse at center, rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 80%);
+        transition-duration: .3s;
+        transition-property: transform opacity;
+    }
+
+    :before {
+        opacity: .4;
+        transform: translateY(6px);
+        animation-name: hover-shadow;
+        animation-duration: 1.5s;
+        animation-delay: .3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    :hover {
+        transform: translateY(-6px);
+        animation-name: hover;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }*/
+}
+
+.graphic-container {
+    grid-column: 3/11;
+    margin: auto;
+    padding: 10px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+}
+
+.section-header {
+    grid-column: 4/10;
+}
+
+.section-divider {
+    grid-column: 1/13;
+    margin: 50px;
+    max-width:1200px;
+}
+
+.grid-item {
+    border: 2px solid blue;
+    background: blue; 
+    text-align: center;
+}
+
+.md-header {
+    grid-column: 1/13;
+    border-bottom: solid 2px red;
+}
+
+.grid-graphic-text-container {
+    grid-column: 4/10;
+}
+
+.greeting {
+    grid-column: 5/9;
+}
+
+.svg {
+    display: block;
+    border: none;
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+}
+
+/*.blog-grid {
     display: grid;
     justify-items: center;
     gap: 15px;
@@ -115,4 +362,29 @@ nav {
             }
         }
     }
+}*/
+
+
+.alpha {
+    grid-column: 1/13;
+    font-size:5rem;
+    background-color: red;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+    .section-divider {
+        grid-column: 1/13;
+        margin: 5px;
+    }
+}
+
+
+
+
+
+
+
+
+

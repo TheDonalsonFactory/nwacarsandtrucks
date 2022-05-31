@@ -1,40 +1,47 @@
 ﻿
-<div class="top-row ps-3 navbar navbar-dark">
-    
-    <div class="container-fluid">
 
-        <a class="navbar-brand" ><img src="/css/NWA Cars and Trucks Logo.svg" style="height:1.1rem">  NWA Cars And Trucks </a>
-        
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</div>
+
+
+
+
+
+<button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+
 
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <nav>
+        <div class="">
 
+            <a class=""><img class="logo svg" src="/css/NWA Cars and Trucks Logo.svg">   </a>
+        </div>
         <div class="myNav-item  px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>
         </div>
-
-        <div class="myNav-item px-3">
+        @*        <div class="myNav-item px-3">
+            <NavLink class="nav-link" href="newsletter">
+            <span class="oi oi-list-rich" aria-hidden="true"></span> Newsletters
+            </NavLink>
+            </div>*@
+        @*        <div class="myNav-item px-3">
             <NavLink class="nav-link" href="calculators">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Calculators
+            <span class="oi oi-list-rich" aria-hidden="true"></span> Calculators
             </NavLink>
-        </div>
-        <div class="myNav-item px-3">
+            </div>*@
+        @*        <div class="myNav-item px-3">
             <NavLink class="nav-link" href="blog">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Blogs
+            <span class="oi oi-list-rich" aria-hidden="true"></span> Blogs
             </NavLink>
-        </div>
-        <div class="myNav-item px-3">
+            </div>*@
+        @*        <div class="myNav-item px-3">
             <NavLink class="nav-link" href="steps">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Purchasing a Vehicle
+            <span class="oi oi-list-rich" aria-hidden="true"></span> Purchasing a Vehicle
             </NavLink>
-        </div>
+            </div>*@
         <div class="myNav-item px-3">
             <NavLink class="nav-link" href="dealer-layout">
                 <span class="oi oi-list-rich" aria-hidden="true"></span> Dealership Layout
@@ -42,39 +49,39 @@
         </div>
         <div class="myNav-item px-3">
             <NavLink class="nav-link" href="mission">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Mission
+                <span class="oi oi-list-rich" aria-hidden="true"></span>My Mission
             </NavLink>
         </div>
-        <div class="myNav-item px-3">
+        @*        <div class="myNav-item px-3">
             <NavLink class="nav-link" href="howto">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> How To Videos
+            <span class="oi oi-list-rich" aria-hidden="true"></span> How To Videos
             </NavLink>
-        </div>
+            </div>*@
         <div class="myNav-item px-3">
             <NavLink class="nav-link" href="contact">
                 <span class="oi oi-list-rich" aria-hidden="true"></span> Contact
             </NavLink>
         </div>
-        <div class="myNav-item px-3">
+        @*        <div class="myNav-item px-3">
             <NavLink class="nav-link" href="faq">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> FAQ
+            <span class="oi oi-list-rich" aria-hidden="true"></span> FAQ
             </NavLink>
-        </div>
-        <div class="myNav-item px-3">
+            </div>*@
+        @*        <div class="myNav-item px-3">
             <NavLink class="nav-link" href="sitemap">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Sitemap
+            <span class="oi oi-list-rich" aria-hidden="true"></span> Sitemap
             </NavLink>
-        </div>
-        <div class="myNav-item px-3">
+            </div>*@
+        @*        <div class="myNav-item px-3">
             <NavLink class="nav-link" href="privacy">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Privacy
+            <span class="oi oi-list-rich" aria-hidden="true"></span> Privacy
             </NavLink>
-        </div>
-        <div class="myNav-item px-3">
+            </div>*@
+        @*        <div class="myNav-item px-3">
             <NavLink class="nav-link" href="terms">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Terms and Conditions
+            <span class="oi oi-list-rich" aria-hidden="true"></span> Terms and Conditions
             </NavLink>
-        </div>
+            </div>*@
         <div class="myNav-item px-3">
             <NavLink class="nav-link" href="https://www.facebook.com/NWACarsandTrucks">
                 <span class="oi fa-brands fa-facebook" aria-hidden="true"></span>  Facebook
@@ -106,8 +113,8 @@
             </NavLink>
         </div>
     </nav>
-</div>
 
+</div>
 @code {
     private bool collapseNavMenu = true;
 
@@ -117,4 +124,4 @@
     {
         collapseNavMenu = !collapseNavMenu;
     }
-}
+    }
