@@ -45,6 +45,7 @@ nav {
 
 img {
   max-width: 1200px;
+  width: 95%;
 }
 
 main {
@@ -52,19 +53,19 @@ main {
 }
 
 .myTitle {
-  font-size: 10rem;
+  font-size: 4vw;
   text-align: center;
 }
 
 .cars {
   color: #0000ca;
-  font-size: 8rem;
+  font-size: 2vw;
   text-align: center;
 }
 
 .trucks {
   color: #ca0000;
-  font-size: 8rem;
+  font-size: 2vw;
   text-align: center;
 }
 
@@ -72,6 +73,8 @@ main {
   background: -webkit-linear-gradient(0deg, #0000ca 0%, #ca0000 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  grid-column: 1/13;
+  font-size: 1vw;
 }
 
 .grid-container {
@@ -84,7 +87,6 @@ main {
   justify-content: center;
   margin: auto;
   padding: 10px;
-  border: 3px solid green;
   text-align: center;
 }
 
@@ -134,6 +136,7 @@ main {
   display: flex;
   align-items: center;
   line-height: 3rem;
+  font-size: 1vw;
 }
 .myNav-item a :visited {
   color: pink;
@@ -344,9 +347,23 @@ main {
     }
 }*/
 .alpha {
-  grid-column: 1/13;
+  grid-column: 3/13;
   font-size: 5rem;
   background-color: red;
+}
+
+.mission-text-box {
+  grid-column: 4/6;
+}
+
+.hero-pic {
+  grid-column: 8/11;
+  max-width: 95%;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
 }
 
 @media only screen and (max-width: 600px) {
